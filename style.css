@@ -1,0 +1,209 @@
+/* ===== Reset & Base ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0f0f0f;
+  color: #e4e4e7;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* ===== Header ===== */
+header {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+header h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #a78bfa, #60a5fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  color: #71717a;
+  font-size: 1rem;
+  margin-top: 6px;
+  font-weight: 400;
+}
+
+/* ===== Layout ===== */
+main {
+  display: flex;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 32px 48px;
+}
+
+/* ===== Content Area ===== */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background: #1a1a1e;
+  border: 1px solid #27272a;
+  border-radius: 16px;
+  padding: 24px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  border-color: #3f3f46;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+  font-weight: 600;
+  color: #a1a1aa;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.8rem;
+}
+
+.card p {
+  color: #d4d4d8;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* ===== Images ===== */
+img {
+  border-radius: 12px;
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: sticky;
+  top: 24px;
+  align-self: flex-start;
+  background: #1a1a1e;
+  border: 1px solid #27272a;
+  border-radius: 16px;
+  padding: 28px 24px;
+}
+
+.sidebar h2 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #71717a;
+  margin-bottom: 8px;
+}
+
+/* ===== Buttons ===== */
+button {
+  width: 100%;
+  padding: 10px 16px;
+  border: 1px solid #3f3f46;
+  background: transparent;
+  color: #e4e4e7;
+  border-radius: 10px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: rgba(167, 139, 250, 0.1);
+  border-color: #a78bfa;
+  color: #a78bfa;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.reveal-btn {
+  border: none;
+  background: none;
+  color: #71717a;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-size: 0.82rem;
+  padding: 6px 0;
+  margin-top: 4px;
+}
+
+.reveal-btn:hover {
+  color: #a78bfa;
+  background: none;
+  border: none;
+  transform: none;
+}
+
+/* ===== Riddle Answer ===== */
+.riddle-answer {
+  margin-top: 12px;
+  padding: 12px 16px;
+  background: rgba(167, 139, 250, 0.08);
+  border-left: 3px solid #a78bfa;
+  border-radius: 0 8px 8px 0;
+  color: #c4b5fd;
+  font-weight: 500;
+}
+
+/* ===== Game Over Message ===== */
+.game-over-text {
+  color: #ef4444;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 12px;
+  text-align: center;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .sidebar h2 {
+    width: 100%;
+  }
+
+  .sidebar button {
+    width: auto;
+    flex: 1;
+    min-width: 120px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+}
